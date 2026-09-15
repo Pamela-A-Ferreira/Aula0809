@@ -23,16 +23,8 @@ class IMC : ComponentActivity() {
         val btnCalcularIMC = findViewById<Button>(R.id.btnCalcularIMC)
 
         btnCalcularIMC.setOnClickListener {
-            // Pegar o texto do EditText
-            val txtAltura = findViewById<EditText>(R.id.txtAltura)
-            val txtPeso = findViewById<EditText>(R.id.txtPeso)
-            val labelCalcularIMC = findViewById<TextView>(R.id.labelCalcularIMC)
-            val btnCalcularIMC = findViewById<Button>(R.id.btnCalcularIMC)
-
-            btnCalcularIMC.setOnClickListener {
                 val altura = txtAltura.text.toString().toDoubleOrNull()
                 val peso = txtPeso.text.toString().toDoubleOrNull()
-
                 if (altura == null || peso == null) {
                     labelCalcularIMC.text = "Valor inválido"
                     return@setOnClickListener
@@ -41,6 +33,7 @@ class IMC : ComponentActivity() {
                 val imc: Double? = (peso) / (altura * altura)
                 labelCalcularIMC.text = "O seu IMC é: $imc"
 
+            }
                 val btnSwitchToMedia = findViewById<Button>(R.id.btnLayoutMedia)
 
                 btnSwitchToMedia.setOnClickListener {
@@ -48,5 +41,4 @@ class IMC : ComponentActivity() {
                 }
             }
         }
-    }
-}
+    

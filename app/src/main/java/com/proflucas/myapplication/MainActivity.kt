@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 
@@ -14,6 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         setContentView(R.layout.activity_media)
+        Toast.makeText(this, "Trocou para Calcular Média!", Toast.LENGTH_SHORT).show()
 
         val txtNota1 = findViewById<EditText>(R.id.txtNota1)
         val txtNota2 = findViewById<EditText>(R.id.txtNota2)
